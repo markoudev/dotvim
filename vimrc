@@ -9,7 +9,7 @@ set softtabstop=2
 " keep indention
 set autoindent
 
-" ctrl hjkl move windows shortcuit
+" ctrl+hjkl move windows shortcut
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
