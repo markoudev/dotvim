@@ -1,3 +1,7 @@
+" autoload plugins in ~/.vim/bundle
+execute pathogen#infect()
+filetype plugin indent on
+
 " properly add tabs
 set expandtab
 set shiftwidth=2

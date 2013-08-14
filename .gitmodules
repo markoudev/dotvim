@@ -1,0 +1,3 @@
+[submodule "bundle/ctrp"]
+	path = bundle/ctrp
+	url = https://github.com/kien/ctrlp.vim
