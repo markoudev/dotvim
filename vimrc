@@ -1,3 +1,6 @@
+" quickly open todo-list
+command TODO :e ~/todo.md
+
 " autoload plugins in ~/.vim/bundle
 execute pathogen#infect()
 filetype plugin indent on
@@ -36,4 +39,7 @@ set undolevels=1000
 " show matching braces
 set showmatch
 highlight MatchParen cterm=bold ctermfg=black ctermbg=white
+
+" I want rspec to be the makeprg
+set makeprg=bundle\ exec\ rspec
 

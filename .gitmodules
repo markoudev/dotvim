@@ -1,3 +1,12 @@
 [submodule "bundle/ctrp"]
 	path = bundle/ctrp
 	url = https://github.com/kien/ctrlp.vim
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/coffee-script"]
+	path = bundle/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = https://github.com/tpope/vim-markdown
