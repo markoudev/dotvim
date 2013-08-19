@@ -1,9 +1,12 @@
+" enable all features
+set nocompatible
+filetype plugin indent on
+
 " quickly open todo-list
-command TODO :e ~/todo.md
+command! TODO :e ~/todo.md
 
 " autoload plugins in ~/.vim/bundle
 execute pathogen#infect()
-filetype plugin indent on
 
 " properly add tabs
 set expandtab
@@ -42,4 +45,7 @@ highlight MatchParen cterm=bold ctermfg=black ctermbg=white
 
 " I want rspec to be the makeprg
 set makeprg=bundle\ exec\ rspec
+
+" Use space to (un)fold
+nnoremap <Space> za
 
