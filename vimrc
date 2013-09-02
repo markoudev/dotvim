@@ -13,6 +13,7 @@ filetype plugin indent on       " load filetype plugins/indent settings
 set background=dark             " we use a dark background
 syntax on                       " syntax highlighting, can't live without it
 set autoindent                  " auto indent new lines
+set lazyredraw                  " don't redraw while executing macros (good performance config)
 
 set number                      " show line numbers and color them red
 highlight LineNr ctermfg=red
@@ -24,6 +25,7 @@ set hlsearch                    " highlight search mathes
 set ttyfast                     " got a fast terminal
 
 set showmatch                   " show matching braces and color them
+set mat=2
 highlight MatchParen cterm=bold ctermfg=black ctermbg=white
 
 " properly add tabs
@@ -34,15 +36,22 @@ set softtabstop=2
 " show command being typed
 set showcmd
 
+" use rspec as make program
+set makeprg=bundle\ exec\ rspec
+
+" define UnwantedWhitespace pattern group and highlight trailing whitespaces
+highlight UnwantedWhitespace ctermbg=red guibg=red
+match UnwantedWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * redraw!
+
 " ctrl+hjkl move windows shortcut
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-" I want rspec to be the makeprg
-set makeprg=bundle\ exec\ rspec
-
 " Use space to (un)fold
 nnoremap <Space> za
 
+" Remove trailing white-spaces with <leader>W
+nnoremap <leader>W :%s/\s\+$//<cr>:noh<CR>
