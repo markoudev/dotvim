@@ -12,7 +12,6 @@ set nocompatible                " explicitely get out of vi-compatible mode
 filetype plugin indent on       " load filetype plugins/indent settings
 set background=dark             " we use a dark background
 syntax on                       " syntax highlighting, can't live without it
-set autoindent                  " auto indent new lines
 set lazyredraw                  " don't redraw while executing macros (good performance config)
 
 set number                      " show line numbers and color them red
@@ -29,15 +28,24 @@ set mat=2
 highlight MatchParen cterm=bold ctermfg=black ctermbg=white
 
 " properly add tabs
-set expandtab
+set smarttab
 set shiftwidth=2
 set softtabstop=2
+set tabstop=2
+set autoindent
+
+" enable terminal titles
+set title
 
 " show command being typed
 set showcmd
 
 " use rspec as make program
 set makeprg=bundle\ exec\ rspec
+
+" set grep program
+set grepprg=ack-grep
+set grepformat=%f:%l:%m
 
 " define UnwantedWhitespace pattern group and highlight trailing whitespaces
 highlight UnwantedWhitespace ctermbg=red guibg=red
