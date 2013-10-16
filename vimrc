@@ -63,3 +63,6 @@ nnoremap <Space> za
 
 " Remove trailing white-spaces with <leader>W
 nnoremap <leader>W :%s/\s\+$//<cr>:noh<CR>
+
+" Toggle NERD tree with C-n
+nnoremap <C-n> :NERDTreeToggle<CR>
