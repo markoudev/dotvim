@@ -28,14 +28,11 @@ set mat=2
 highlight MatchParen cterm=bold ctermfg=black ctermbg=white
 
 " properly add tabs
-set smarttab
+set expandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set autoindent
-
-" enable terminal titles
-set title
 
 " show command being typed
 set showcmd
@@ -46,6 +43,9 @@ set makeprg=bundle\ exec\ rspec
 " set grep program
 set grepprg=ack-grep
 set grepformat=%f:%l:%m
+
+" use 80 columns in markdown
+autocmd FileType markdown setlocal textwidth=80
 
 " define UnwantedWhitespace pattern group and highlight trailing whitespaces
 highlight UnwantedWhitespace ctermbg=red guibg=red
