@@ -10,9 +10,11 @@ cabbrev x <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? '' : 'x')<CR>
 
 set nocompatible                " explicitely get out of vi-compatible mode
 filetype plugin indent on       " load filetype plugins/indent settings
-set background=dark             " we use a dark background
 syntax on                       " syntax highlighting, can't live without it
 set lazyredraw                  " don't redraw while executing macros (good performance config)
+
+" Set theming stuff
+set background=dark
 
 set number                      " show line numbers and color them red
 highlight LineNr ctermfg=red
@@ -26,6 +28,25 @@ set ttyfast                     " got a fast terminal
 set showmatch                   " show matching braces and color them
 set mat=2
 highlight MatchParen cterm=bold ctermfg=black ctermbg=white
+
+" Airline
+set laststatus=2 " Always display the statusline in all windows
+
+" Airline
+let g:airline_enable_branch=1
+let g:airline_enable_syntastic=1
+let g:airline_powerline_fonts=0
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_linecolumn_prefix = '␊ '
+let g:airline_linecolumn_prefix = '␤ '
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_branch_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
+let g:airline_paste_symbol = 'Þ'
+let g:airline_paste_symbol = '∥'
 
 " give us mouse support!
 set mouse=a
