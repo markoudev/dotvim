@@ -27,6 +27,9 @@ set showmatch                   " show matching braces and color them
 set mat=2
 highlight MatchParen cterm=bold ctermfg=black ctermbg=white
 
+" give us mouse support!
+set mouse=a
+
 " properly add tabs
 set expandtab
 set shiftwidth=2
